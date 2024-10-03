@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   get "/:username" => "users#show", as: :user
+  get "/:username/liked" => "users#liked", as: :liked
 end
