@@ -10,7 +10,7 @@ task({ :sample_data => :environment }) do
 
   12.times do
     name = Faker::Name.first_name
-    User.create(
+    u = User.create(
       email: "#{name}@example.com",
       password: "password",
       username: name,
@@ -19,6 +19,8 @@ task({ :sample_data => :environment }) do
 
     p u.errors.full_messages
   end
+
+  users = User.all
 
   users.each do |first_user|
     users.each do |second_user|
