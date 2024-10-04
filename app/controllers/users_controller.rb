@@ -2,21 +2,27 @@ class UsersController < ApplicationController
   before_action :get_user, only: [:show, :liked, :feed, :discover, :followers, :following]
 
   def show
+    @own_photos = @user.own_photos
   end
 
   def liked
+    @liked_photos = @user.liked_photos
   end
 
   def feed
+    @feed = @user.feed
   end
 
   def discover
+    @discover = @user.discover
   end
 
   def follwers
+    @followers = @user.followers
   end
 
   def following
+    @following = @user.following
   end
 
   private

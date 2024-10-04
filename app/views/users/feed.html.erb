@@ -1,5 +1,5 @@
 <%= render partial: "users/tabs", locals: { user: @user } %>
 
-<% @user.feed.each do |photo| %>
+<% @feed.each do |photo| %>
   <%= render partial: "photos/photo", locals: { photo: photo } %>
 <% end %>
