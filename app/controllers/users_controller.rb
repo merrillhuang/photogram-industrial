@@ -22,7 +22,7 @@ class UsersController < ApplicationController
   end
 
   def following
-    @following = @user.following
+    @following = @user.leaders
   end
 
   private
