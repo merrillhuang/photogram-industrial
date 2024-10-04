@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     @discover = @user.discover
   end
 
-  def follwers
+  def followers
     @followers = @user.followers
   end
 

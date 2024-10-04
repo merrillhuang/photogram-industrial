@@ -1,5 +1,3 @@
 <%= render partial: "users/tabs", locals: { user: @user } %>
 
-<% @following.each do |leader| %>
-  <%= render partial: "photos/photo", locals: { connection: leader } %>
-<% end %>
+<%= render partial: "users/connections", locals: { connections: @following } %>
